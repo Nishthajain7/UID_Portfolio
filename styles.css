@@ -21,7 +21,6 @@ header {
   background: rgba(13, 17, 23, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  padding: 1rem 5%;
   z-index: 100;
 }
 
@@ -56,13 +55,12 @@ nav {
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 5% 6rem;
 }
 
 .hero {
-  padding-top: 2rem;
   display: flex;
   gap: 5rem;
+  align-items: center;
 }
 
 .profile-container {

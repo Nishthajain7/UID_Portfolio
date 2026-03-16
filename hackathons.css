@@ -1,116 +1,114 @@
 :root {
-    --bg: #0d1117;
-    --text: #c9d1d9;
-    --green: #00ff9d;
-    --blue: #58a6ff;
-    --gray: #8b949e;
-    --border: #30363d;
-    --card: #161b22;
-  }
-  
-  * { margin:0; padding:0; box-sizing:border-box; }
-  
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: system-ui, monospace;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-  
-  main {
-    padding: 0;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-    margin-bottom: 3.5rem;
-    font-size: 2.4rem;
-  }
-  
+  --bg: #0d1117;
+  --text: #c9d1d9;
+  --green: #00ff9d;
+  --blue: #58a6ff;
+  --gray: #8b949e;
+  --border: #30363d;
+  --card: #161b22;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, monospace;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+main {
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-size: 2.4rem;
+}
+
+.hackathons-grid {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hackathon-card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.hackathon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.hack-header {
+  background: #0a0e14;
+  padding: 1rem 1.5rem;
+  color: var(--green);
+  font-weight: bold;
+  font-family: monospace;
+  border-bottom: 1px solid var(--border);
+}
+
+.hack-body {
+  padding: 1.6rem;
+}
+
+.hack-body h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.hack-body p {
+  color: var(--gray);
+  margin-bottom: 1.2rem;
+}
+
+.role {
+  color: var(--green);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.hack-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.btn {
+  background: var(--green);
+  color: #000;
+  padding: 0.3rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #00e089;
+}
+
+@media (max-width: 800px) {
   .hackathons-grid {
-    display: flex;
-    width:100%;
-    flex-direction: row;   
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
-  
-  
-  .hackathon-card {
-    flex: 1 1 300px;  
-    max-width: 360px;  
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.25s ease;
-  }
-  
-  .hackathon-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  }
-  
-  .hack-header {
-    background: #0a0e14;
-    padding: 1rem 1.5rem;
-    color: var(--green);
-    font-weight: bold;
-    font-family: monospace;
-    border-bottom: 1px solid var(--border);
-  }
-  
-  .hack-body {
-    padding: 1.6rem;
-  }
-  
-  .hack-body h2 {
-    color: white;
-    margin-bottom: 1rem;
-    font-size: 1.35rem;
-  }
-  
-  .hack-body p {
-    color: var(--gray);
-    margin-bottom: 1.2rem;
-  }
-  
-  .role {
-    color: var(--green);
-    font-weight: bold;
-    margin-bottom: 1.2rem;
-  }
-  
-  .hack-img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-  }
-  
-  .btn {
-    background: var(--green);
-    color: #000;
-    padding: 0.3rem 1.4rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
-  }
-  
-  .btn:hover {
-    background: #00e089;
-  }
-  
-  @media (max-width: 800px) {
-    .hackathons-grid { grid-template-columns: 1fr; }
-  }
-  
+}
